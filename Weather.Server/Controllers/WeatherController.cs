@@ -20,9 +20,6 @@ namespace Weather.Server.Controllers
         public async Task<IActionResult> Get(string city)
         {
             var url = $"https://api.openweathermap.org/data/2.5/weather?q={city}&appid={apiKey}&units=metric";
-            //var response = await _httpClient.GetStringAsync(url);
-            //return Ok(response);
-
 
             var httpResponse = await _httpClient.GetAsync(url);
 
